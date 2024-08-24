@@ -1,4 +1,12 @@
-/* Reset some basic styles */
+* h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+Reset some basic styles
+body, html {
+    font-family: 'Inter', sans-serif;
+}
+
 body, html, div, section, a {
     margin: 0;
     padding: 0;
@@ -11,11 +19,10 @@ body, html, div, section, a {
 
 .Container {
     margin: 0 auto;
-    padding: 0px  50px;
 }
 
 .header {
-    padding-top: 10px;
+    padding: 0px 80px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #000;
@@ -45,9 +52,11 @@ body, html, div, section, a {
 }
 
 .header .right a {
-    margin-left: 20px;
     text-decoration: none;
     color: #333;
+}
+.header .right a img{
+    margin-right: 20px;
 }
 .header .right a.J-Bg{
     width: 30px;
@@ -62,35 +71,30 @@ body, html, div, section, a {
     font-weight: 500;
 }
 
-.right .Login, .header .right .signup {
+.header .right a.Login{
     padding: 10px 20px;
     border: 1px solid #333;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    color:#334155    ;
+}
+.header .right a.signup{
+    margin-left: 20px;
+    padding: 10px 20px;
+    background: #334155;
+    color:#FFFFFF;
+
 }
 
-.header .right .Login:hover, .header .right .signup:hover {
-    background: #333;
-    color: #fff;
-}
-
-.header .right .signup {
-    background: #f4f4f4;
-    color: #333;
-}
-
-.header .right .signup:hover {
-    background: #333;
-    color: #fff;
-}
 section.content{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top:40px;
     margin-bottom: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 section.content div.left {
-    width:400px;
+   max-width: 600px;
 }
 section.content div.left h1{
     font-size: 40px;
@@ -98,12 +102,12 @@ section.content div.left h1{
     line-height: 48px;
 }
 section.content div.left p{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 25.6px;
 }
 section.content div.left a.button{
-    padding:10px 24px;
+    padding:10px 10px;
     background: #3B82F6;
     border-radius: 8px;
     font-size: 14px;
@@ -113,11 +117,13 @@ section.content div.left a.button{
    
     
 }
-section.content div.right{
-    margin-right: 40px;
+section.content div.right img{
+    width: 500px;
+    height: 100%;
+    margin-right: 60px;
+    background:#FFFFFF;
 }
-#count{}
-#count div.Container {
+#count  {
     background: #F8FAFC;
     height: auto; 
     min-height: 100px;
@@ -127,26 +133,26 @@ section.content div.right{
     padding: 10px 40px; 
 }
 
-#count div.Container div.Number {
+#count  div.Number {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 4px dotted  #E2E8F0;
+    border-right: 4px solid  #E2E8F0;
     padding-right: 100px; 
 }
-#count div.Container div.Number:last-child{
+#count  div.Number:last-child{
     padding-right: 0;
     border-right: none;
 }
 
-#count div.Container div.Number h2 {
+#count  div.Number h2 {
     font-size: 32px;
     font-weight: 600;
     color: #0F172A;
     margin: 0; 
 }
 
-#count div.Container div.Number p {
+#count  div.Number p {
     font-size: 14px;
     font-weight: 400;
     color: #0F172A;
@@ -154,23 +160,28 @@ section.content div.right{
     padding-top: 5px;
 }
 section#Categories{
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
-section#Categories section.Cards{}
-section#Categories section.Cards div.header{
+section#Categories section.Cards{
+    margin-top: 40px;
+}
+section#Categories section.Cards div.heading{
     display: flex;
     justify-content: space-between;
     border-bottom: none;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    padding: 0;
 }
-section#Categories section.Cards div.header h3{
+section#Categories section.Cards div.heading h3{
     font-size: 24px;
     font-weight: 600;
     color: #0F172A;
 }
-section#Categories section.Cards div.header a.Button{
+section#Categories section.Cards div.heading a.Button{
     padding: 10px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -183,11 +194,14 @@ section#Categories section.Cards div.Courses{
     justify-content: space-between;
 }
 section#Categories section.Cards div.Courses div.Category-card{
-    padding: 20px 60px;
+    width: 300px;
+    height: 250px;
+    padding: 20px 40px;
     box-shadow: 0px 0px 8px 0px #3B82F61F;
     display: flex;
     flex-direction: column;
     align-items:center;
+    justify-content: center;
     border: 1px solid #E2E8F0;
     border-radius: 16px;
 }
@@ -214,6 +228,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin-bottom: 10px;
 }
 #Categories section.Courses{
+    margin-top: 40px;
 
 }
 #Categories section.Courses div.Course-header{
@@ -226,6 +241,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 #Categories section.Courses div.Course-header h3{
     font-size: 24px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 #Categories section.Courses div.Course-header a.Button{
     text-decoration: none;
@@ -241,9 +257,13 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     justify-content: space-between;
 }
 #Categories section.Courses div.Course-Card div.Item-Card{
+    width: 300px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     box-shadow: 0px 0px 8px 0px #3B82F61F;
     border: 1px solid #E2E8F0;
-    padding: 10px;
     border-radius: 8px;
 }
 #Categories section.Courses div.Course-Card div.Item-Card h5{
@@ -332,18 +352,20 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     color:#fff;
 }
 #Quotes-Cards div.Quotes{
-    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 #Quotes-Cards div.Quotes div.Item-Card{
-    width: 400px;
+    background:#FFFFFF;
+    width: 430px;
+    height: 270px;
     box-shadow: 0px 0px 8px 0px #3B82F61F;
     border: 1px solid  #E2E8F0;
     border-radius: 16px;
-    padding: 24px;
+    padding: 60px 40px 20px;
     margin-bottom: 40px;
 }
 #Quotes-Cards div.Quotes div.Item-Card p{
@@ -405,19 +427,34 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 #Instruction div.Instructor div.right{
     width: 500px;
 }
-#Instruction div.Instructor div.right h4{
+#Instruction div.Instructor,div.instructor-1 div.right h4{
     font-size: 20px;
     font-weight: 600;
     color: #000000;
 }
-#Instruction div.Instructor div.right p{
+#Instruction div.Instructor,div.instructor-1 div.right p{
     font-size: 16px;
     font-weight: 400;
     color: #1D2939;
 }
-#Instruction div.Instructor div.right a.longButton{
+#Instruction div.Instructor  div.right a.longButton{
+    width: 250px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: #020617;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+#Instruction div.Instructor  div.right a.longButton img{
+    margin-left: 10px;
+}
+#Instruction div.Instructor-1 div.right a.longButton-1{
     width: 200px;
-    padding: 10px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     background: #020617;
     color: #fff;
@@ -427,23 +464,17 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     display: flex;
     align-items: center;
 }
-#Instruction div.Instructor div.right a.longButton img{
+#Instruction div.Instructor-1 div.right a.longButton-1 img{
     margin-left: 10px;
 }
-#Instruction div.Instructor div.right a.longButton-1{
-    width: 140px;
-    padding: 10px 24px;
-    border-radius: 8px;
-    background: #020617;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
+#Instruction div.Instructor-1{
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding:0 200px ;
 }
-#Instruction div.Instructor div.right a.longButton-1 img{
-    margin-left: 10px;
+#Instruction div.Instructor-1 div.right{
+    width: 500px;
 }
 #Footer{
     background: #1E293B;
@@ -451,11 +482,11 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 }
 #Footer  .Footer-section{
     padding-top: 50px;
-    padding-left: 80px;
-    padding-right: 80px;
     padding-bottom: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 #Footer  .Footer-section .LogoName {
@@ -472,6 +503,10 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 
 }
 #Footer  .Footer-section .LogoName div.bottom span{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    line-height: 20px;
     font-size: 14px;
     font-weight: 400;
     color:  #CBD5E1;
@@ -487,6 +522,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin-bottom: 10px;
 }
 #Footer  .Footer-section .help a.button-Text{
+    display: inline-block;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -494,12 +530,30 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin-bottom: 5px;
 
 }
-#Footer  .Footer-section .help img.social{
-    margin-top: 10px;
+#Footer  .Footer-section .help div.Social{
     width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#Footer  .Footer-section .help div.Social a.image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+#Footer  .Footer-section .help div.Social img.social{
+    width: 20px;
+
+    
+    
 }
 .Spotlight {
-    padding: 40px 60px;
+    padding: 40px 80px;
     display: flex;
     justify-content: space-between;
     background: #F8FAFC;
@@ -528,6 +582,9 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 }
 .Spotlight .Top span.Diff{
     color: #2563EB;
+}
+.Spotlight .Bottom .left span{
+    margin-right: 10px;
 }
 
 .Spotlight .Top img {
@@ -592,21 +649,24 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 }
 
 .Spotlight .Author a {
-    color: #333;
+    color:#2563EB;
+    margin-left: 5px;
     text-decoration: none;
     font-weight: bold;
 }
 .Spotlight .right{
+    width: 400px;
+    background: #F8FAFC;
     box-shadow: 0px 0px 8px 0px #3B82F61F;
     border: 1px solid #E2E8F0;
     border-radius: 16px;
-    padding: 20px;
     position: absolute;
     left: 70%;
 
 }
-.Spotlight .right img{
-    width: 100%;
+.Spotlight .right img.first{
+    padding: 20px;
+
 }
 .Spotlight .right .Price{
     display: flex;
@@ -633,6 +693,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 .Spotlight .right div.Spotlight-Button{
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
 
 }
 .Spotlight .right div.Spotlight-Button a.spotlightButton{
@@ -659,7 +720,6 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin-bottom: 0;
 }
 .Spotlight .right div.Share{
-    padding: 0px 20px;
     border-top: 1px dotted  #E2E8F0;
     margin-top: 20px;
 }
@@ -668,26 +728,57 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     font-weight: 500;
     color: #0F172A;
     margin-bottom: 10px;
+    margin-left: 20px;
 }
-.Spotlight .right div.Share a{}
+.Spotlight .right div.Share div.Social{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-bottom: 20px;
+
+}
+.Spotlight .right div.Share div.Social a.image{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        box-shadow: 0px 0px 8px 0px #3B82F61F;
+
+}
+.Spotlight .right div.Share div.Social a.image img.social{
+        width: 30px;
+        padding: 10px;
+
+        
+}
+
 .Spotlight .right div.Share a img{}
 .Courses-Description{
     margin-top: 20px;
-    border-bottom: 1px solid #E2E8F0;
 }
 .Courses-Description div.CourseHead{
+    margin-left: 80px;
     display: flex;
     justify-content: space-between;
     width: 700px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #E2E8F0;
-    height: 100px;
+    border-bottom: 2px solid #E2E8F0;
 }
 .Courses-Description div.CourseHead div.Button{
     padding: 18px 21px;
     border-radius: 8px;
     border:1px solid #E2E8F0;
     height: 20px;
+    margin-bottom: 20px;
+}
+.Courses-Description div.CourseHead div.Button:hover{
+    background: #EFF6FF;
+
 }
 .Courses-Description div.CourseHead div.Button a{
     text-decoration: none;
@@ -697,6 +788,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 
 }
 .Courses-Description div.CoursesDescription{
+    margin-left: 80px;
     width: 800px;
     border-bottom:1px solid #E2E8F0 ;
 }
@@ -711,7 +803,9 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     color: #334155;
 }
 .Courses-Description div.Instractor{
+    margin-left: 80px;
     width: 600px;
+    border-bottom:1px solid #E2E8F0 ;
 }
 .Courses-Description div.Instractor h4{
     font-size: 20px;
@@ -759,11 +853,15 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     margin: 0;
 }
 .Courses-Description div.Sylabus{
+    width: 700px;
     border-bottom: 1px solid #E2E8F0  ;
+    margin-left: 80px;
+    margin-top: 20px;
 }
 .Courses-Description div.Sylabus h4{
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 .Courses-Description div.Sylabus{}
 .Courses-Description div.Sylabus div.Dropdown{
@@ -771,6 +869,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     align-items: center;
     justify-content: space-between;
     border: 1px solid #E2E8F0;
+    border-radius: 8px;
     width: 700px;
 }
 .Courses-Description div.Sylabus div.Dropdown:last-child{
@@ -796,7 +895,10 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     font-weight: 400;
     color: #334155;
 }
-.Review{}
+.Review{
+    margin-left: 80px;
+    margin-top: 20px;
+}
 .Review h1{
     font-size: 20px;
     font-weight: 600;
@@ -807,13 +909,12 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     justify-content: space-between;
 }
 .Review div.Container div.Left{
-    width: 600px;
+    width: 20%;
 }
 .Review div.Container div.Left div.rate{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 150px;
+    width: 200px;
     height: 20px;
     margin-bottom: 10px;
 }
@@ -824,6 +925,7 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     font-size: 20px;
     font-weight: 600;
     color: #0F172A;
+    margin-right: 5px;
 }
 .Review div.Container div.Left div.rate span{
     font-size: 14px;
@@ -833,26 +935,26 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
 .Review div.Container div.Right{
     flex: 1;
     margin-top: 20px;
+    margin-right: 80px;
 }
 .Review div.Container div.Right div.ReviewCard{
     border: 1px solid #E2E8F0;
     border-radius: 16px;
     display: flex; 
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
     padding: 10px;
     margin-bottom: 10px;
 }
 .Review div.Container div.Right div.ReviewCard div.LeftItem{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 140px;
+    margin-right: 200px;
 } 
 .Review div.Container div.Right div.ReviewCard div.LeftItem h5{
     font-size: 18px;
     font-weight: 600;
     color: #0F172A;
+    margin-left: 5px;
 }
 .Review div.Container div.Right div.ReviewCard div.RightItem{
     width: 600px;
@@ -877,17 +979,15 @@ section#Categories section.Cards div.Courses div.Category-card div.Icon-Bg{
     font-weight: 400;
     color:   #334155;
 }
-.Review div.Container div.Right div.button{
-    padding:10px 24px;
+.Review div.Container div.Right a.button{
+    padding:10px 10px;
     border: 1px solid #0F172A ;
     border-radius: 8px;
-    width: 200px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-}
-.Review div.Container div.Right div.button a{
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
